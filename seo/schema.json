@@ -1,0 +1,17 @@
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BotXizmati Restaurant Telegram Bot",
+    "operatingSystem": "Telegram",
+    "applicationCategory": "BusinessApplication",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "89"
+    },
+    "offers": {
+        "@type": "Offer",
+        "price": "800000",
+        "priceCurrency": "UZS"
+    }
+}
