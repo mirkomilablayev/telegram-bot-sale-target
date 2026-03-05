@@ -98,7 +98,11 @@
         <div class="container">
             <div class="hero-left">
                 <div class="badge-pulsing" data-i18n="badge">🔥 Bu oy faqat 2 ta joy qoldi!</div>
-                <h1 data-i18n="heroHeadline">Restoran uchun Telegram Bot — Buyurtmalar avtomatik kelsin!</h1>
+                <h1 class="hero-title">
+                    Telegram bot —
+                    <span id="niche-word" class="gold-niche">restoranlar</span>
+                    uchun buyurtmalar avtomatik kelsin!
+                </h1>
                 <p data-i18n="heroSubtitle">Mijozlar o'zlari buyurtma bersin. Siz faqat tayyorlang.</p>
 
                 <div class="hero-bullets">
@@ -110,7 +114,7 @@
                             ishlaydi</span></div>
                 </div>
 
-                <div class="hero-buttons">
+                <div class="hero-buttons desktop-only">
                     <a href="#demo-section" class="btn-dark" data-i18n="demoBtnHero">Botni ko'rish 👀</a>
                 </div>
             </div>
@@ -134,6 +138,11 @@
                     </form>
                 </div>
             </div>
+
+            <div class="hero-buttons mobile-only" style="width: 100%; margin-top: 10px;">
+                <a href="#demo-section" class="btn-dark" data-i18n="demoBtnHero"
+                    style="width: 100%; text-align: center;">Botni ko'rish 👀</a>
+            </div>
         </div>
     </section>
 
@@ -144,15 +153,18 @@
         <div class="container">
             <h2 class="social-proof-title" data-i18n="socialProofTitle">Restoran egalari bizga ishonmoqda</h2>
             <div class="stats-grid">
-                <div class="stat-item">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon">🤖</div>
                     <h3 class="gold-text">20+</h3>
                     <p data-i18n="stat1Text">Telegram bot ishlab chiqilgan</p>
                 </div>
-                <div class="stat-item">
-                    <h3 class="gold-text">12</h3>
-                    <p data-i18n="stat2Text">ta restoran hozir botdan foydalanmoqda</p>
+                <div class="stat-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="stat-icon">🍽️</div>
+                    <h3 class="gold-text">12+</h3>
+                    <p data-i18n="stat2Text">restoran faol foydalanmoqda</p>
                 </div>
-                <div class="stat-item">
+                <div class="stat-card animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="stat-icon">🎧</div>
                     <h3 class="gold-text">24/7</h3>
                     <p data-i18n="stat3Text">texnik yordam</p>
                 </div>
@@ -167,31 +179,36 @@
         <div class="container">
             <h2 data-i18n="demoTitle">Bot qanday ishlaydi?</h2>
 
-            <div class="phone-mockup">
-                <div class="phone-header">
-                    <div class="bot-avatar">🤖</div>
-                    <div class="bot-info">
-                        <div class="bot-name" data-i18n="demoBotName">Biznes Bot</div>
-                        <div class="bot-status">bot</div>
-                    </div>
+            <div class="steps-grid">
+                <!-- STEP 1 -->
+                <div class="step-card animate-on-scroll">
+                    <div class="step-badge">1</div>
+                    <div class="step-icon">🤖</div>
+                    <h3 data-i18n="step1Title">Mijoz Telegram botga kiradi</h3>
+                    <p data-i18n="step1Desc">Reklama yoki havola orqali o'tib, /start bosadi</p>
                 </div>
-                <div class="phone-body">
-                    <div class="chat-bubble" data-i18n="demoMsg">
-                        Assalomu alaykum! Menu bilan tanishing 👇
-                    </div>
-                    <div class="chat-buttons">
-                        <div class="chat-btn-row" style="animation-delay: 0.2s;">
-                            <div class="chat-btn" data-i18n="demoBtn1">🛍️ Katalog</div>
-                            <div class="chat-btn" data-i18n="demoBtn2">🛒 Savatcha</div>
-                        </div>
-                        <div class="chat-btn-row" style="animation-delay: 0.4s;">
-                            <div class="chat-btn" data-i18n="demoBtn3">📞 Aloqa</div>
-                        </div>
-                    </div>
+                <!-- STEP 2 -->
+                <div class="step-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="step-badge">2</div>
+                    <div class="step-icon">📱</div>
+                    <h3 data-i18n="step2Title">Menyuni ko'radi</h3>
+                    <p data-i18n="step2Desc">Chiroyli va qulay menyu orqali taomlarni tanlaydi</p>
+                </div>
+                <!-- STEP 3 -->
+                <div class="step-card animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="step-badge">3</div>
+                    <div class="step-icon">🛒</div>
+                    <h3 data-i18n="step3Title">Buyurtma beradi</h3>
+                    <p data-i18n="step3Desc">Manzilni kiritadi va kerakli taomlarni savatchaga qo'shadi</p>
+                </div>
+                <!-- STEP 4 -->
+                <div class="step-card animate-on-scroll" style="transition-delay: 0.6s;">
+                    <div class="step-badge">4</div>
+                    <div class="step-icon">💳</div>
+                    <h3 data-i18n="step4Title">To'lov qiladi</h3>
+                    <p data-i18n="step4Desc">Click, Payme yoki naqd pul orqali to'lovni amalga oshiradi</p>
                 </div>
             </div>
-
-            <div class="demo-caption" data-i18n="demoCaption">👆 Sizning botingiz ham shunday ko'rinadi</div>
         </div>
     </section>
 
@@ -202,18 +219,31 @@
         <div class="container">
             <div class="roi-card">
                 <h2 class="roi-title" data-i18n="roiTitle">Telegram bot o‘zini qancha vaqtda qoplaydi?</h2>
-                <p class="roi-text" data-i18n="roiP1">
-                    Agar restoran kuniga o‘rtacha 20 ta buyurtma olsa va har bir buyurtma 70,000 so‘m bo‘lsa
-                </p>
-                <div class="roi-math">
-                    <div class="roi-row">
-                        <span class="roi-label" data-i18n="roiDailyRevLabel">Kunlik tushum:</span>
-                        <span class="roi-value gold-text">1,400,000 so‘m</span>
+                <div class="roi-calculator">
+                    <!-- BLOCK 1: Orders per day -->
+                    <div class="roi-calc-row">
+                        <span class="roi-calc-label" data-i18n="roiDailyOrdersLabel">Kuniga:</span>
+                        <span class="roi-calc-value">20 ta buyurtma</span>
                     </div>
-                    <div class="roi-row">
-                        <span class="roi-label" data-i18n="roiBotPriceLabel">Bot narxi:</span>
-                        <span class="roi-value gold-text"
-                            style="color: #fff; background: none; -webkit-text-fill-color: #fff;">1,500,000 so‘m</span>
+
+                    <!-- BLOCK 2: Order value -->
+                    <div class="roi-calc-row">
+                        <span class="roi-calc-label" data-i18n="roiOrderValueLabel">1 buyurtma:</span>
+                        <span class="roi-calc-value">70,000 so'm</span>
+                    </div>
+
+                    <!-- BLOCK 3: Daily Revenue (Highlight) -->
+                    <div class="roi-calc-row highlight">
+                        <span class="roi-calc-label" data-i18n="roiDailyRevLabel">Kunlik tushum:</span>
+                        <span class="roi-calc-value gold-text">1,400,000 so'm</span>
+                    </div>
+
+                    <div class="roi-divider"></div>
+
+                    <!-- BLOCK 4: Bot Price -->
+                    <div class="roi-calc-row" style="border: none;">
+                        <span class="roi-calc-label" data-i18n="roiBotPriceLabel">Bot narxi:</span>
+                        <span class="roi-calc-value">1,500,000 so'm</span>
                     </div>
                 </div>
                 <div class="roi-conclusion gold-text" data-i18n="roiConclusion">
@@ -417,7 +447,7 @@
     </footer>
 
     <!-- FLOATING TELEGRAM BUTTON -->
-    <a href="https://t.me/mirkomil_ablayev" class="floating-tg-btn" target="_blank" data-i18n-title="contactTgBtn"
+    <a href="https://t.me/mirkomil_ablayev" class="telegram-float" target="_blank" data-i18n-title="contactTgBtn"
         title="Telegram orqali yozish">
         <svg viewBox="0 0 24 24" fill="currentColor">
             <path

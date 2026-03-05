@@ -12,15 +12,20 @@ const translations = {
         heroCheck3: "24/7 avtomatik ishlaydi",
         heroBtn: "Bepul maslahat olish 🚀",
         stat1Text: "Telegram bot ishlab chiqilgan",
-        stat2Text: "ta restoran hozir botdan foydalanmoqda",
+        stat2Text: "restoran faol foydalanmoqda",
         stat3Text: "texnik yordam",
         demoTitle: "Bot qanday ishlaydi?",
         demoCaption: "👆 Sizning botingiz ham shunday ko'rinadi",
-        demoBotName: "Biznes Bot",
-        demoMsg: "Assalomu alaykum! Menu bilan tanishing 👇",
-        demoBtn1: "🛍️ Katalog",
-        demoBtn2: "🛒 Savatcha",
-        demoBtn3: "📞 Aloqa",
+        demoTitle: "Bot qanday ishlaydi?",
+        demoCaption: "👆 Ko'rsatilgan 4-qadam orqali barcha jarayon to'liq avtomatlashtiriladi",
+        step1Title: "Mijoz Telegram botga kiradi",
+        step1Desc: "Reklama yoki link orqali botga o'tadi va /start bosadi",
+        step2Title: "Menyuni ko'radi",
+        step2Desc: "Chiroyli va qulay menyu orqali taomlarni tanlaydi",
+        step3Title: "Buyurtma beradi",
+        step3Desc: "Manzilini kiritadi va kerakli taomlarni savatga qo'shadi",
+        step4Title: "To'lov qiladi",
+        step4Desc: "Click yoki Payme orqali to'lov qilib, avtomat buyurtmani yuboradi",
         pricingBadge: "Eng mashhur ⭐",
         pricingSubtitle: "Professional Telegram Bot",
         pricingF1: "To'liq funksional bot",
@@ -108,10 +113,19 @@ const translations = {
         seoLi4: "Restoran ishchilari vaqtni tejaydi",
         seoLi5: "Buyurtmalarni boshqarish osonlashadi",
         roiTitle: "Telegram bot o‘zini qancha vaqtda qoplaydi?",
-        roiP1: "Agar restoran kuniga o‘rtacha 20 ta buyurtma olsa va har bir buyurtma 70,000 so‘m bo‘lsa",
+        roiDailyOrdersLabel: "Kuniga:",
+        roiOrderValueLabel: "1 buyurtma:",
         roiDailyRevLabel: "Kunlik tushum:",
         roiBotPriceLabel: "Bot narxi:",
-        roiConclusion: "Demak bot o‘zini taxminan 1 kunda qoplaydi!"
+        roiConclusion: "Demak bot o‘zini taxminan 1 kunda qoplaydi!",
+        niches: [
+            "restoranlar",
+            "klinikalar",
+            "fitness klublar",
+            "beauty salonlar",
+            "o'quv markazlar",
+            "avtoservislar"
+        ]
     },
     ru: {
         socialProofTitle: "Владельцы ресторанов доверяют нам",
@@ -122,16 +136,19 @@ const translations = {
         heroCheck2: "Оплата Click и Payme",
         heroCheck3: "Работает 24/7 автоматически",
         heroBtn: "Получить бесплатную консультацию 🚀",
-        stat1Text: "Telegram ботов разработано",
-        stat2Text: "ресторанов сейчас используют бота",
+        stat1Text: "Разработанных Telegram-ботов",
+        stat2Text: "ресторанов активно используют",
         stat3Text: "техническая поддержка",
         demoTitle: "Как работает бот?",
-        demoCaption: "👆 Ваш бот будет выглядеть так же",
-        demoBotName: "Бизнес Бот",
-        demoMsg: "Здравствуйте! Ознакомьтесь с меню 👇",
-        demoBtn1: "🛍️ Каталог",
-        demoBtn2: "🛒 Корзина",
-        demoBtn3: "📞 Контакты",
+        demoCaption: "👆 Простые 4 шага автоматизации для покупок",
+        step1Title: "Клиент заходит в Telegram бот",
+        step1Desc: "Переходит по рекламе или ссылке и нажимает /start",
+        step2Title: "Смотрит меню",
+        step2Desc: "Выбирает блюда через красивое и удобное меню",
+        step3Title: "Оформляет заказ",
+        step3Desc: "Вводит адрес и добавляет нужные блюда в корзину",
+        step4Title: "Оплачивает",
+        step4Desc: "Оплачивает через Click или Payme, заказ поступает автоматически",
         pricingBadge: "Самый популярный ⭐",
         pricingSubtitle: "Профессиональный Telegram Бот",
         pricingF1: "Полнофункциональный бот",
@@ -219,10 +236,19 @@ const translations = {
         seoLi4: "Экономит время сотрудников ресторана",
         seoLi5: "Упрощает управление заказами",
         roiTitle: "За какое время окупается Telegram бот?",
-        roiP1: "Если ресторан получает в среднем 20 заказов в день и каждый заказ составляет 70 000 сум",
+        roiDailyOrdersLabel: "В день:",
+        roiOrderValueLabel: "1 заказ:",
         roiDailyRevLabel: "Ежедневная выручка:",
         roiBotPriceLabel: "Цена бота:",
-        roiConclusion: "Значит бот окупается примерно за 1 день!"
+        roiConclusion: "Значит бот окупается примерно за 1 день!",
+        niches: [
+            "ресторанов",
+            "клиник",
+            "фитнес клубов",
+            "салонов красоты",
+            "учебных центров",
+            "автосервисов"
+        ]
     },
     en: {
         socialProofTitle: "Restaurant owners trust us",
@@ -234,15 +260,18 @@ const translations = {
         heroCheck3: "Works 24/7 automatically",
         heroBtn: "Get Free Consultation 🚀",
         stat1Text: "Telegram bots developed",
-        stat2Text: "restaurants are currently using the bot",
+        stat2Text: "restaurants actively using",
         stat3Text: "tech support",
         demoTitle: "How does the bot work?",
-        demoCaption: "👆 Your bot will look like this",
-        demoBotName: "Business Bot",
-        demoMsg: "Hello! Check out the menu 👇",
-        demoBtn1: "🛍️ Catalog",
-        demoBtn2: "🛒 Cart",
-        demoBtn3: "📞 Contact",
+        demoCaption: "👆 Users follow these 4 simple steps to automate completely",
+        step1Title: "Customer enters Telegram bot",
+        step1Desc: "Clicks start from an ad or link directly into the bot",
+        step2Title: "Views the Menu",
+        step2Desc: "Browses food categories using a beautiful native interface",
+        step3Title: "Places an Order",
+        step3Desc: "Selects items, enters delivery address, and adds to cart",
+        step4Title: "Makes a Payment",
+        step4Desc: "Pays seamlessly via Click or Payme, pushing the order to you instantly",
         pricingBadge: "Most popular ⭐",
         pricingSubtitle: "Professional Telegram Bot",
         pricingF1: "Fully functional bot",
@@ -329,11 +358,20 @@ const translations = {
         seoLi3: "Payment is processed via Click and Payme",
         seoLi4: "Saves time for restaurant staff",
         seoLi5: "Order management becomes easier",
-        roiTitle: "How fast does the Telegram bot pay for itself?",
-        roiP1: "If a restaurant receives an average of 20 orders per day and each order is 70,000 UZS",
+        roiTitle: "How long does the Telegram bot take to pay off?",
+        roiDailyOrdersLabel: "Per day:",
+        roiOrderValueLabel: "1 order:",
         roiDailyRevLabel: "Daily revenue:",
         roiBotPriceLabel: "Bot price:",
-        roiConclusion: "So the bot pays for itself in about 1 day!"
+        roiConclusion: "So the bot pays for itself in roughly 1 day!",
+        niches: [
+            "restaurants",
+            "clinics",
+            "fitness clubs",
+            "beauty salons",
+            "education centers",
+            "auto services"
+        ]
     }
 };
 
@@ -533,3 +571,76 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Mobile Sticky CTA Observer (Hide when lead form is visible)
+const stickyCta = document.querySelector('.mobile-sticky-cta');
+const leadFormSection = document.getElementById('lead-form');
+
+if (stickyCta && leadFormSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                stickyCta.classList.add('hidden');
+            } else {
+                stickyCta.classList.remove('hidden');
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.1 // Hide exactly when 10% of the form enters the viewport
+    });
+
+    observer.observe(leadFormSection);
+}
+
+// Scroll Animations Observer
+const animateElements = document.querySelectorAll('.animate-on-scroll');
+if (animateElements.length > 0) {
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Optional: Stop observing once animated
+                // scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    animateElements.forEach(el => scrollObserver.observe(el));
+}
+
+// Headline Niche Rotation Logic
+let nicheIndex = 0;
+const nicheElement = document.getElementById("niche-word");
+
+if (nicheElement) {
+    setInterval(() => {
+        // 1. Fade out and slide down
+        nicheElement.classList.add("fade-out");
+
+        setTimeout(() => {
+            // Get current language niches array
+            const currentNiches = translations[currentLang].niches;
+
+            // Advance index
+            nicheIndex = (nicheIndex + 1) % currentNiches.length;
+
+            // Update text
+            nicheElement.textContent = currentNiches[nicheIndex];
+
+            // 2. Instantly jump text above baseline (-15px) while still invisible
+            nicheElement.classList.add("slide-up");
+
+            // Give the browser a tiny frame to apply the jump without transitioning
+            setTimeout(() => {
+                // 3. Remove jump and fade-out to trigger smooth slide down to 0
+                nicheElement.classList.remove("slide-up", "fade-out");
+            }, 30);
+
+        }, 400); // Waits for the 0.3s fade-out to complete
+
+    }, 2500);
+}
