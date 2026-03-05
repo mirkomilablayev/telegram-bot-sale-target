@@ -5,7 +5,8 @@ const translations = {
     uz: {
         socialProofTitle: "Restoran egalari bizga ishonmoqda",
         badge: "🔥 Bu oy faqat 2 ta joy qoldi!",
-        heroHeadline: "Restoran uchun Telegram Bot — Buyurtmalar avtomatik kelsin!",
+        heroPrefix: "Telegram bot — ",
+        heroSuffix: "uchun buyurtmalar avtomatik kelsin!",
         heroSubtitle: "Mijozlar o'zlari buyurtma bersin. Siz faqat tayyorlang.",
         heroCheck1: "7 kunda tayyor",
         heroCheck2: "Click va Payme to'lov",
@@ -130,7 +131,8 @@ const translations = {
     ru: {
         socialProofTitle: "Владельцы ресторанов доверяют нам",
         badge: "🔥 Только 2 места в этом месяце!",
-        heroHeadline: "Telegram Бот для ресторана — Заказы на автопилоте!",
+        heroPrefix: "Telegram Бот для ",
+        heroSuffix: "— Заказы на автопилоте!",
         heroSubtitle: "Клиенты заказывают сами. Вы просто готовите.",
         heroCheck1: "Готово за 7 дней",
         heroCheck2: "Оплата Click и Payme",
@@ -253,7 +255,8 @@ const translations = {
     en: {
         socialProofTitle: "Restaurant owners trust us",
         badge: "🔥 Only 2 spots left this month!",
-        heroHeadline: "Restaurant Telegram Bot — Orders on Autopilot!",
+        heroPrefix: "Telegram Bot for ",
+        heroSuffix: "— Orders on Autopilot!",
         heroSubtitle: "Customers order themselves. You just cook.",
         heroCheck1: "Ready in 7 days",
         heroCheck2: "Click and Payme payment",
@@ -426,6 +429,15 @@ langOptions.forEach(option => {
                 el.title = translations[lang][key];
             }
         });
+
+        // Instantly translate active niche word
+        const activeNiche = document.querySelector('.gold-niche.active');
+        if (activeNiche && typeof nicheIndex !== 'undefined') {
+            const currentNiches = translations[lang].niches;
+            if (currentNiches && currentNiches[nicheIndex]) {
+                activeNiche.textContent = currentNiches[nicheIndex];
+            }
+        }
     });
 });
 
@@ -614,33 +626,40 @@ if (animateElements.length > 0) {
 
 // Headline Niche Rotation Logic
 let nicheIndex = 0;
-const nicheElement = document.getElementById("niche-word");
+const nicheWrapper = document.getElementById("niche-wrapper");
 
-if (nicheElement) {
+if (nicheWrapper) {
     setInterval(() => {
-        // 1. Fade out and slide down
-        nicheElement.classList.add("fade-out");
+        const currentNiches = translations[currentLang].niches;
+        const currentActive = nicheWrapper.querySelector('.gold-niche.active');
 
+        // Advance array index safely
+        nicheIndex = (nicheIndex + 1) % currentNiches.length;
+        const nextWord = currentNiches[nicheIndex];
+
+        // 1. Generate the incoming string block
+        const newEl = document.createElement("span");
+        newEl.className = "gold-niche sliding-in";
+        newEl.textContent = nextWord;
+        nicheWrapper.appendChild(newEl);
+
+        // 2. Force DOM reflow enabling the CSS transform physics
+        void newEl.offsetWidth;
+
+        // 3. Eject the old word sequentially while bridging the new array
+        if (currentActive) {
+            currentActive.classList.remove("active");
+            currentActive.classList.add("sliding-out");
+        }
+
+        // Command the incoming word downwards into position (0px)
+        newEl.classList.remove("sliding-in");
+        newEl.classList.add("active");
+
+        // 4. Clean up memory node drops after full transition completes
         setTimeout(() => {
-            // Get current language niches array
-            const currentNiches = translations[currentLang].niches;
-
-            // Advance index
-            nicheIndex = (nicheIndex + 1) % currentNiches.length;
-
-            // Update text
-            nicheElement.textContent = currentNiches[nicheIndex];
-
-            // 2. Instantly jump text above baseline (-15px) while still invisible
-            nicheElement.classList.add("slide-up");
-
-            // Give the browser a tiny frame to apply the jump without transitioning
-            setTimeout(() => {
-                // 3. Remove jump and fade-out to trigger smooth slide down to 0
-                nicheElement.classList.remove("slide-up", "fade-out");
-            }, 30);
-
-        }, 400); // Waits for the 0.3s fade-out to complete
+            if (currentActive) currentActive.remove();
+        }, 500); // Maps accurately to the 0.5s CSS transition frame
 
     }, 2500);
 }
